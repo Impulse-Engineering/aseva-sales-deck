@@ -25,5 +25,5 @@ binding = "KV"
 id = "e28149934c3b40df85745646e214f3c6"
 
 [[routes]]
-pattern = "aseva-sales-deck.apps.dev.aseva.ai/*"
+pattern = "slides.aseva.ai/*"
 zone_name = "aseva.com"
