@@ -1,5 +1,6 @@
 import defaultDeckHtml from '../aseva-sales-deck.html';
 import staffingworldDeckHtml from '../prospect-staffingworld-deck.html';
+import monsterEnergyDeckHtml from '../prospect-monster-energy-deck.html';
 
 const HTML_HEADERS = {
   'Content-Type': 'text/html;charset=UTF-8',
@@ -12,6 +13,7 @@ const HTML_HEADERS = {
 const routes: Record<string, string> = {
   '/': defaultDeckHtml,
   '/staffingworld': staffingworldDeckHtml,
+  '/monster-energy': monsterEnergyDeckHtml,
 };
 
 export default {
