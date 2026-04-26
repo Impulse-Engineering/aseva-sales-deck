@@ -1,4 +1,5 @@
 import defaultDeckHtml from '../aseva-sales-deck.html';
+import liveDeckHtml from '../aseva-sales-deck-live.html';
 import staffingworldDeckHtml from '../prospect-staffingworld-deck.html';
 import monsterEnergyDeckHtml from '../prospect-monster-energy-deck.html';
 import localSmbDeckHtml from '../prospect-local-smb-deck.html';
@@ -13,6 +14,7 @@ const HTML_HEADERS = {
 // '/acme': acmeDeckHtml,
 const routes: Record<string, string> = {
   '/': defaultDeckHtml,
+  '/live': liveDeckHtml,
   '/staffingworld': staffingworldDeckHtml,
   '/monster-energy': monsterEnergyDeckHtml,
   '/local-smb': localSmbDeckHtml,
