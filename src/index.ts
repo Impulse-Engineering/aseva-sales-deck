@@ -6,7 +6,7 @@ import localSmbDeckHtml from '../prospect-local-smb-deck.html';
 
 const HTML_HEADERS = {
   'Content-Type': 'text/html;charset=UTF-8',
-  'Cache-Control': 'public, max-age=86400',
+  'Cache-Control': 'no-store',
 };
 
 // Add prospect deck imports and routes here:
