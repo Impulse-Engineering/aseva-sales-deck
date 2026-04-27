@@ -52,3 +52,11 @@ After creating the deck file:
 1. Add `import <slug>DeckHtml from '../prospect-<slug>-deck.html';` to `src/index.ts`
 2. Add `'/<slug>': <slug>DeckHtml` to the `routes` map
 3. Commit and push to main — Conductor deploys automatically
+
+### HTML cache-control — non-negotiable
+
+The `HTML_HEADERS` constant in `src/index.ts` MUST set `Cache-Control: no-store`. Never use `max-age=86400` or any positive max-age value for HTML.
+
+A 24-hour cache means deploys appear to succeed (Conductor reports green, the Worker is updated) but browsers serve the previous HTML for a full day. That is what makes a presentation show stale info during a live demo even after a "fresh" deploy. The cost of `no-store` is one extra request per page load. The cost of caching is broken demos.
+
+This applies to every route the Worker serves — `/`, `/live`, every prospect path, every future deck. There is no path on this Worker where a 24-hour HTML cache is correct.

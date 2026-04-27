@@ -204,3 +204,42 @@ The `deck-stage` component auto-applies `data-screen-label` and `data-om-validat
 - Never go below 24px text
 - Never put text closer than 140px from the bottom edge (overflows page-meta)
 - Never use SVG to fake a logo — always use the real PNG from `assets/`
+
+---
+
+## 8. Slide sequencing and copy rules
+
+These rules sit on top of the archetype system in §4. The archetype is the layout; these govern the connective tissue between slides and the headline-level copy choices that shape how the deck reads.
+
+### Cybersecurity sequencing — 5-layer overview before partner deep-dives
+
+Never jump from a high-level "we do cybersecurity" claim straight into specific partner products (Cato, eSentire). The Cato slide and the eSentire slide both make sense only after the buyer sees the full security stack and where each partner fits.
+
+**Required pattern:** an overview slide that names the five layers — **Identity / Network / Endpoint / Monitoring / Email** — must appear before any partner-product deep-dive. The layer cards on that overview can explicitly tee up the deep-dives:
+- Network card → "anchored by Cato — next slide"
+- Monitoring card → "anchored by eSentire — slide after that"
+
+This frames Aseva as full-stack rather than as a Cato reseller, and gives the partner deep-dives context.
+
+If the deck only covers one cybersecurity area (e.g., a SASE-only brief), the rule still applies. Show the full stack first, then narrow into the one anchor partner. The overview slide is what positions Aseva correctly even when the rest of the deck is product-specific.
+
+### Pillar headlines — lead with accountability concretes, not "team"
+
+Avoid headlines like **"Three pillars, one accountable team."** "One accountable team" reads to skeptical IT buyers as "jack of all trades, master of none." Exactly the wrong association on a positioning slide.
+
+Better: **"Three pillars. Same engineers. One bill."**
+
+Same structural promise (we do all three, it's coherent), but the second version leads with operational concretes (engineers, bill) rather than an abstract noun. Buyers who've been burned by jack-of-all-trades vendors react differently to "same engineers" than to "one team."
+
+Applies anywhere the deck makes a multi-pillar claim — covers, section dividers, "Why Aseva" callouts. When in doubt, swap "team" for the concrete mechanic that makes the team real (engineers, single bill, single number to call, single account manager).
+
+### Abstract differentiator claims need concrete proof points
+
+Positioning claims float without concrete proof points. Pair them.
+
+- "We're a carrier with engineers" — floats.
+- "25-year average engineer tenure" — lands.
+- "We have engineers" — floats.
+- "Direct access to the engineers who deployed our fiber, two Aseva datacenters, and the security stack" — lands.
+
+A claim plus a number, a named role, or a customer-specific detail always beats a claim alone. The rule applies most often on the differentiator slide and any "Why Aseva" slide — vague claims there set the tone for the whole pitch. If a positioning headline does not have a concrete to lean on, sharpen it until it does or cut it.

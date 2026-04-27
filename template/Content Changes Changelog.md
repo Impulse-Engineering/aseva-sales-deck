@@ -159,3 +159,37 @@ Taking all of the above together, here are the recurring mistakes to avoid:
 ---
 
 *Generated from a human-review pass on `Aseva Sales Deck.html`.*
+
+---
+
+# Round 2 — Additional patterns (2026-04-26)
+
+Patterns codified directly from a deck-output review pass, without paired old/new text. Apply them as universal rules across every slide.
+
+## "Carrier with engineers" is tautology — use access framing instead
+
+Never write "carrier with engineers" or any phrasing that implies engineers themselves are the differentiator. Every carrier has engineers. The phrase is tautological and floats past skeptical readers.
+
+The actual claim is **the access**: "the same engineers who built and run our network are available to your project." That is a skill set typical MSPs cannot bring, and access is what the customer actually receives.
+
+Two contrasts that land:
+- **"Carrier, not a reseller"** — leads with ownership and operation. Real category contrast.
+- **"The engineers who built our network are working on your project"** — leads with access and availability. Concrete and customer-relevant.
+
+Apply this on every differentiator slide, every "Why Aseva" slide, and any positioning copy that reaches for "carrier with engineers."
+
+## "And account team" is weak filler — name each role explicitly
+
+When describing the human service layer beyond engineers, do not write "and an account team" or "and support staff." It reads as filler an LLM tacked on to round out a sentence.
+
+The right phrasing is the **explicit list**: **"Engineers, account managers, project managers, support — staffed as separate roles."**
+
+The specificity is the point. Naming each role signals that each function has its own headcount, which signals in turn that engineers do not get pulled into account management work. Generic "account team" hides the structural promise that "separately staffed" is making.
+
+## Pillar slides must explicitly show implement / project-manage / support
+
+Common failure mode on pillar slides (Connectivity, Voice, Cybersecurity): the deck reads like a reseller catalog of capabilities. The reader sees a list of products and assumes Aseva is selling and someone else is delivering.
+
+Cure: a single line at the bottom of each pillar slide — **"Implemented, project-managed, and supported by the Aseva team."**
+
+That one sentence reframes the entire slide from "products we sell" to "products we run end to end." Add it once per pillar slide. Do not vary the wording across pillars — consistency is part of the signal.
