@@ -43,77 +43,86 @@ WAVEFORM_SOFT = """<svg class="wave-soft" viewBox="0 0 1000 1000" aria-hidden="t
 
 CORNER_LOGO = f'<img src="{logo_data}" alt="Aseva" class="corner-logo" />'
 
-ECOSYSTEM_SVG = """<svg viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:500px;">
+ECOSYSTEM_SVG = """<svg viewBox="0 0 1380 510" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:490px;">
   <defs>
+    <!-- Cyan arrowhead (forward) -->
     <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 1 L9 5 L0 9 Z" fill="#00a1e2"/>
     </marker>
-    <marker id="aht" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <!-- Cyan arrowhead (reverse, for bidirectional start) -->
+    <marker id="ahs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 1 L9 5 L0 9 Z" fill="#00a1e2"/>
     </marker>
-    <marker id="ah-big" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+    <!-- Navy arrowhead (entry arrow) -->
+    <marker id="ah-entry" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
       <path d="M0 1 L9 5 L0 9 Z" fill="#051a35"/>
     </marker>
   </defs>
 
-  <!-- Sales &amp; Marketing (navy filled, far left) -->
-  <rect x="10" y="190" width="185" height="115" rx="10" fill="#051a35"/>
-  <text x="102" y="243" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Sales &amp;</text>
-  <text x="102" y="275" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Marketing</text>
+  <!-- ── NODES ── -->
 
-  <!-- Account Management -->
-  <rect x="285" y="190" width="210" height="115" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="390" y="243" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#051a35">Account</text>
-  <text x="390" y="275" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#051a35">Management</text>
+  <!-- Sales & Marketing: navy filled, entry point -->
+  <rect x="18" y="213" width="190" height="112" rx="10" fill="#051a35"/>
+  <text x="113" y="263" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Sales &amp;</text>
+  <text x="113" y="293" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Marketing</text>
 
-  <!-- Billing -->
-  <rect x="600" y="55" width="175" height="105" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="688" y="115" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="28" font-weight="600" fill="#051a35">Billing</text>
+  <!-- Account Management: diamond LEFT -->
+  <rect x="340" y="211" width="205" height="116" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="443" y="261" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Account</text>
+  <text x="443" y="291" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Management</text>
 
-  <!-- Accounting -->
-  <rect x="1010" y="10" width="185" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="1103" y="68" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="28" font-weight="600" fill="#051a35">Accounting</text>
+  <!-- Billing: diamond TOP -->
+  <rect x="615" y="60" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="703" y="118" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">Billing</text>
 
-  <!-- SI / PM -->
-  <rect x="1010" y="195" width="185" height="105" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="1103" y="255" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="28" font-weight="600" fill="#051a35">SI / PM</text>
+  <!-- SI/PM: diamond RIGHT -->
+  <rect x="862" y="211" width="175" height="116" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="950" y="277" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">SI / PM</text>
 
-  <!-- TAC -->
-  <rect x="600" y="340" width="175" height="105" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="688" y="400" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="28" font-weight="600" fill="#051a35">TAC</text>
+  <!-- TAC: diamond BOTTOM -->
+  <rect x="615" y="378" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="703" y="436" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">TAC</text>
 
-  <!-- NOC -->
-  <rect x="1010" y="375" width="185" height="105" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="1103" y="435" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="28" font-weight="600" fill="#051a35">NOC</text>
+  <!-- Accounting: satellite top-right -->
+  <rect x="1090" y="28" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="1178" y="86" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Accounting</text>
 
-  <!-- ARROWS -->
+  <!-- NOC: satellite bottom-right -->
+  <rect x="1090" y="378" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
+  <text x="1178" y="436" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">NOC</text>
 
-  <!-- Sales &amp; Marketing to Account Management (one-way, thick navy) -->
-  <line x1="197" y1="247" x2="283" y2="247" stroke="#051a35" stroke-width="4" marker-end="url(#ah-big)"/>
+  <!-- ── ARROWS ── -->
 
-  <!-- Account Management to/from Billing (diagonal up-right) -->
-  <line x1="450" y1="210" x2="598" y2="140" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- Entry: Sales & Marketing → Account Management -->
+  <line x1="210" y1="269" x2="338" y2="269" stroke="#051a35" stroke-width="4.5" marker-end="url(#ah-entry)"/>
 
-  <!-- Account Management to/from TAC (diagonal down-right) -->
-  <line x1="450" y1="285" x2="598" y2="355" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- ── CIRCULAR FLOW: four diamond edges, curved outward ── -->
 
-  <!-- Billing to/from Accounting (diagonal up-right) -->
-  <line x1="777" y1="90" x2="1008" y2="55" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- AM ↔ Billing: bows upper-left (outside the diamond) -->
+  <path d="M 468,213 Q 430,50 650,112" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 
-  <!-- Billing to/from SI/PM (diagonal down-right) -->
-  <line x1="777" y1="130" x2="1008" y2="220" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- Billing ↔ SI/PM: bows upper-right -->
+  <path d="M 788,88 Q 960,10 914,213" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 
-  <!-- Accounting to/from SI/PM (vertical) -->
-  <line x1="1103" y1="112" x2="1103" y2="193" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- SI/PM ↔ TAC: bows lower-right -->
+  <path d="M 912,322 Q 1010,468 790,428" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 
-  <!-- SI/PM to/from NOC (vertical) -->
-  <line x1="1103" y1="302" x2="1103" y2="373" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- TAC ↔ AM: bows lower-left (completing the circle) -->
+  <path d="M 617,418 Q 420,492 443,327" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 
-  <!-- TAC to/from NOC (horizontal) -->
-  <line x1="777" y1="410" x2="1008" y2="415" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- ── SATELLITES ── -->
 
-  <!-- TAC to/from SI/PM (diagonal up-right) -->
-  <line x1="777" y1="365" x2="1008" y2="290" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#aht)" marker-end="url(#ah)"/>
+  <!-- Billing ↔ Accounting -->
+  <path d="M 788,98 Q 940,50 1092,78" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+
+  <!-- SI/PM ↔ Accounting -->
+  <line x1="1040" y1="245" x2="1092" y2="118" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+
+  <!-- SI/PM ↔ NOC -->
+  <line x1="1040" y1="305" x2="1092" y2="388" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+
+  <!-- TAC ↔ NOC -->
+  <line x1="790" y1="428" x2="1092" y2="428" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 </svg>"""
 
 HTML = f"""<!doctype html>
