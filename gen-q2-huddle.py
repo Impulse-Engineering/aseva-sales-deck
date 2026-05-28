@@ -10,6 +10,9 @@ logo_b64 = base64.b64encode((ASSETS / "aseva-horizontal.png").read_bytes()).deco
 logo_data = f"data:image/png;base64,{logo_b64}"
 deck_js   = JS_SRC.read_text()
 
+eco_b64   = base64.b64encode((ASSETS / "slide-06-ecosystem.png").read_bytes()).decode()
+eco_img   = f"data:image/png;base64,{eco_b64}"
+
 WAVEFORM_FULL = """<svg class="wave-bg" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g fill="#00a1e2" opacity="0.22">
       <rect x="70" y="560" width="16" height="40" rx="2"/>
@@ -709,14 +712,7 @@ HTML = f"""<!doctype html>
 
 <!-- ================= 06 CLIENT SERVICES ECOSYSTEM ================= -->
 <section data-label="06 Client Services Ecosystem" class="ecosystem">
-  <div class="frame">
-    <p class="eyebrow">Client Services Ecosystem &nbsp;&middot;&nbsp; Waytek inserted as a director</p>
-    <h2 class="title">How the office connects.</h2>
-    <div style="margin-top:8px;flex:1;display:flex;align-items:center;justify-content:center;">
-      {ECOSYSTEM_SVG}
-    </div>
-  </div>
-  <div class="page-meta"><span>Aseva &nbsp;&middot;&nbsp; Q2 Extended Huddle</span><span class="rule"></span><span>06</span></div>
+  <img src="{eco_img}" alt="How the office connects" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
 </section>
 
 <!-- ================= 07 CLOSING ================= -->
