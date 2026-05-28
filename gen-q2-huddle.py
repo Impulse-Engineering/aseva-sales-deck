@@ -528,15 +528,15 @@ HTML = f"""<!doctype html>
     <div class="three">
       <div class="card">
         <h4>Verticalization</h4>
-        <p>Going deeper in specific verticals to build a repeatable sales motion. Focused industry expertise translates to faster qualification, stronger proposals, and higher close rates.</p>
+        <p>Going deeper in specific verticals to build a repeatable sales motion. Focused industry expertise means stronger proposals and higher close rates.</p>
       </div>
       <div class="card">
         <h4>Book-of-Business</h4>
-        <p>Systematic expansion within the existing account base. Customers who already trust Aseva are the fastest path to growth, and every account manager owns a defined growth plan.</p>
+        <p>We are adding sales executives who bring their own book of business, relationships they can convert to meetings on day one with no ramp time.</p>
       </div>
       <div class="card">
         <h4>Marketing</h4>
-        <p>Building the pipeline that feeds the machine. Marketing moves from reactive to proactive, generating qualified leads that the sales team can work rather than waiting for referrals.</p>
+        <p>We are already driving new leads to the website. Next is aggressive calls to action on every page, paired with automated outbound marketing powered by agentic AI, a lead engine that runs while we are in the field.</p>
       </div>
     </div>
   </div>
@@ -551,11 +551,11 @@ HTML = f"""<!doctype html>
     <div class="two">
       <div class="col">
         <h4>Midwest Roadshows</h4>
-        <p>Michael and Chris taking Aseva's full story on the road in the Midwest. Direct in-person engagement in a market where we are building presence and name recognition. Face-to-face beats email every time at this stage of a relationship.</p>
+        <p>Michael and Chris taking Aseva's full story on the road in the Midwest. Face-to-face beats email every time at this stage of a relationship.</p>
       </div>
       <div class="col">
         <h4>Win-back Roadshows</h4>
-        <p>Targeted outreach to former customers who left for reasons that no longer apply. Aseva is a materially different company from what they experienced. These are warm conversations, not cold calls, and the close rate reflects it.</p>
+        <p>Targeted outreach to IT leaders who worked with Aseva in the past and have since moved to new companies. These are warm relationships we have not actively cultivated, and a proven lead source with a conversion rate that reflects it.</p>
       </div>
     </div>
   </div>
@@ -580,7 +580,7 @@ HTML = f"""<!doctype html>
         <div class="num">02</div>
         <div>
           <h4>Bolstering account management</h4>
-          <p>A stronger account management layer handles customer relationships, renewal conversations, and service coordination. The field can stay focused on new business instead of splitting time between prospects and existing accounts.</p>
+          <p>A stronger account management layer handles customer relationships, renewal conversations, and service coordination.</p>
         </div>
       </div>
       <div class="pillar">
@@ -608,48 +608,8 @@ HTML = f"""<!doctype html>
   <div class="page-meta"><span>Aseva &nbsp;&middot;&nbsp; Q2 Extended Huddle</span><span class="rule"></span><span>06</span></div>
 </section>
 
-<!-- ================= 07 NEW STRUCTURE ================= -->
-<section data-label="07 New Structure" class="newstruct">
-  {CORNER_LOGO}
-  <div class="frame">
-    <p class="eyebrow">Office leadership</p>
-    <div class="split">
-      <div class="left">
-        <div class="rule-cyan"></div>
-        <h2>Waytek steps in as a <em>director</em>. Michael can focus on the field.</h2>
-        <p>Michael cannot run an outbound sales organization and manage the internal operating details at the same time. The two jobs are incompatible at the pace we need to move.</p>
-        <p>Waytek's role as director gives the office a clear owner for the operational layer. Michael's attention goes where it creates the most value: in front of customers and prospects.</p>
-      </div>
-      <div class="right reasons">
-        <div class="reason">
-          <div class="idx">01</div>
-          <div>
-            <h5>Single owner for the operational layer</h5>
-            <p>Every internal process, handoff, and follow-up has one person accountable. No more gaps between what the field commits and what the office delivers.</p>
-          </div>
-        </div>
-        <div class="reason">
-          <div class="idx">02</div>
-          <div>
-            <h5>Account management gets real bandwidth</h5>
-            <p>With office management off the plate, account managers can deepen customer relationships instead of triaging administrative requests.</p>
-          </div>
-        </div>
-        <div class="reason">
-          <div class="idx">03</div>
-          <div>
-            <h5>AI integration starts with process clarity</h5>
-            <p>You cannot automate a process no one owns. Waytek's role creates the organizational clarity needed to identify which workflows are ready for AI and which need redesign first.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="page-meta"><span>Aseva &nbsp;&middot;&nbsp; Q2 Extended Huddle</span><span class="rule"></span><span>07</span></div>
-</section>
-
-<!-- ================= 08 CLOSING ================= -->
-<section data-label="08 Close" class="cover">
+<!-- ================= 07 CLOSING ================= -->
+<section data-label="07 Close" class="cover">
   {WAVEFORM_FULL}
   <div class="frame">
     <div>
@@ -659,14 +619,14 @@ HTML = f"""<!doctype html>
   </div>
 </section>
 
-<!-- ================= 09 DISCUSSION ================= -->
-<section data-label="09 Discussion" class="discuss">
+<!-- ================= 08 DISCUSSION ================= -->
+<section data-label="08 Discussion" class="discuss">
   {CORNER_LOGO}
   <div class="frame">
     <p class="eyebrow">Discussion</p>
     <p class="big-q">Any questions on <em>why this needs to happen</em>?</p>
   </div>
-  <div class="page-meta"><span>Aseva &nbsp;&middot;&nbsp; Q2 Extended Huddle</span><span class="rule"></span><span>09</span></div>
+  <div class="page-meta"><span>Aseva &nbsp;&middot;&nbsp; Q2 Extended Huddle</span><span class="rule"></span><span>08</span></div>
 </section>
 
 </deck-stage>
