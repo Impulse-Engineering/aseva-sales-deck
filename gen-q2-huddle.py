@@ -43,86 +43,111 @@ WAVEFORM_SOFT = """<svg class="wave-soft" viewBox="0 0 1000 1000" aria-hidden="t
 
 CORNER_LOGO = f'<img src="{logo_data}" alt="Aseva" class="corner-logo" />'
 
-ECOSYSTEM_SVG = """<svg viewBox="0 0 1380 510" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:490px;">
+ECOSYSTEM_SVG = """<svg width="1100" height="440" viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" aria-label="Client services ecosystem cycle" style="display:block;width:100%;height:auto;max-height:680px;">
   <defs>
-    <!-- Cyan arrowhead (forward) -->
-    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0 1 L9 5 L0 9 Z" fill="#00a1e2"/>
+    <marker id="arrow-coral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF7A59"/>
     </marker>
-    <!-- Cyan arrowhead (reverse, for bidirectional start) -->
-    <marker id="ahs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 1 L9 5 L0 9 Z" fill="#00a1e2"/>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E6FE0"/>
     </marker>
-    <!-- Navy arrowhead (entry arrow) -->
-    <marker id="ah-entry" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
-      <path d="M0 1 L9 5 L0 9 Z" fill="#051a35"/>
+    <marker id="arrow-blue-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M10,0 L0,5 L10,10 z" fill="#1E6FE0"/>
     </marker>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0E1B36"/>
+    </marker>
+    <radialGradient id="hub-wash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#EAF1FC" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#EAF1FC" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- ── NODES ── -->
+  <!-- Soft radial wash behind ring -->
+  <circle cx="560" cy="220" r="230" fill="url(#hub-wash)"/>
 
-  <!-- Sales & Marketing: navy filled, entry point -->
-  <rect x="18" y="213" width="190" height="112" rx="10" fill="#051a35"/>
-  <text x="113" y="263" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Sales &amp;</text>
-  <text x="113" y="293" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="26" font-weight="600" fill="#ffffff">Marketing</text>
+  <!-- Concentric guide rings -->
+  <circle cx="560" cy="220" r="168" fill="none" stroke="#DCEAFB" stroke-width="1" stroke-dasharray="2 6"/>
+  <circle cx="560" cy="220" r="120" fill="none" stroke="#EEF3FB" stroke-width="1"/>
+  <circle cx="560" cy="220" r="78" fill="none" stroke="#F3F6FC" stroke-width="1"/>
 
-  <!-- Account Management: diamond LEFT -->
-  <rect x="340" y="211" width="205" height="116" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="443" y="261" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Account</text>
-  <text x="443" y="291" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Management</text>
+  <!-- Coral cycle arcs (clockwise quarter-arcs of r=168) -->
+  <path d="M 397 179 A 168 168 0 0 1 519 57" fill="none" stroke="#FF7A59" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+  <path d="M 601 57 A 168 168 0 0 1 723 179" fill="none" stroke="#FF7A59" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+  <path d="M 723 261 A 168 168 0 0 1 601 383" fill="none" stroke="#FF7A59" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+  <path d="M 519 383 A 168 168 0 0 1 397 261" fill="none" stroke="#FF7A59" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
 
-  <!-- Billing: diamond TOP -->
-  <rect x="615" y="60" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="703" y="118" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">Billing</text>
+  <!-- Blue kickout connectors (bidirectional) -->
+  <path d="M 620 78 Q 760 28, 838 72" fill="none" stroke="#1E6FE0" stroke-width="1.6" marker-start="url(#arrow-blue-start)" marker-end="url(#arrow-blue)"/>
+  <path d="M 800 196 Q 870 130, 905 110" fill="none" stroke="#1E6FE0" stroke-width="1.6" marker-start="url(#arrow-blue-start)" marker-end="url(#arrow-blue)"/>
+  <path d="M 800 244 Q 870 310, 905 330" fill="none" stroke="#1E6FE0" stroke-width="1.6" marker-start="url(#arrow-blue-start)" marker-end="url(#arrow-blue)"/>
+  <path d="M 620 362 Q 760 412, 838 368" fill="none" stroke="#1E6FE0" stroke-width="1.6" marker-start="url(#arrow-blue-start)" marker-end="url(#arrow-blue)"/>
 
-  <!-- SI/PM: diamond RIGHT -->
-  <rect x="862" y="211" width="175" height="116" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="950" y="277" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">SI / PM</text>
+  <!-- Ink intake arrow: Sales & Marketing → Account Management -->
+  <path d="M 235 220 L 380 220" fill="none" stroke="#0E1B36" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
 
-  <!-- TAC: diamond BOTTOM -->
-  <rect x="615" y="378" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="703" y="436" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">TAC</text>
+  <!-- Handoff cycle tick label -->
+  <text x="560" y="36" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9.5" font-weight="600" fill="#FF7A59" style="letter-spacing:0.14em;text-transform:uppercase;">Handoff cycle</text>
 
-  <!-- Accounting: satellite top-right -->
-  <rect x="1090" y="28" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="1178" y="86" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="25" font-weight="600" fill="#051a35">Accounting</text>
+  <!-- Sales & Marketing (entry, navy) -->
+  <foreignObject x="85" y="190" width="150" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node entry">
+      <span class="eco-entry-role">Intake</span>
+      <span>Sales &amp; Marketing</span>
+    </div>
+  </foreignObject>
 
-  <!-- NOC: satellite bottom-right -->
-  <rect x="1090" y="378" width="175" height="100" rx="10" fill="#ffffff" stroke="#051a35" stroke-width="2.5"/>
-  <text x="1178" y="436" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="27" font-weight="600" fill="#051a35">NOC</text>
+  <!-- Account Management (9 o'clock) -->
+  <foreignObject x="306" y="190" width="148" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node core">
+      <span>Account Management</span>
+    </div>
+  </foreignObject>
 
-  <!-- ── ARROWS ── -->
+  <!-- Billing (12 o'clock) -->
+  <foreignObject x="486" y="62" width="148" height="56">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node core">
+      <span>Billing</span>
+    </div>
+  </foreignObject>
 
-  <!-- Entry: Sales & Marketing → Account Management -->
-  <line x1="210" y1="269" x2="338" y2="269" stroke="#051a35" stroke-width="4.5" marker-end="url(#ah-entry)"/>
+  <!-- SI / PM (3 o'clock) -->
+  <foreignObject x="654" y="190" width="148" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node core">
+      <span>SI&#160;/&#160;PM</span>
+    </div>
+  </foreignObject>
 
-  <!-- ── CIRCULAR FLOW: four diamond edges, curved outward ── -->
+  <!-- TAC (6 o'clock) -->
+  <foreignObject x="486" y="322" width="148" height="56">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node core">
+      <span>TAC</span>
+    </div>
+  </foreignObject>
 
-  <!-- AM ↔ Billing: bows upper-left (outside the diamond) -->
-  <path d="M 468,213 Q 430,50 650,112" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+  <!-- Accounting (aux, top-right) -->
+  <foreignObject x="838" y="50" width="138" height="54">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node aux">
+      <span>Accounting</span>
+    </div>
+  </foreignObject>
 
-  <!-- Billing ↔ SI/PM: bows upper-right -->
-  <path d="M 788,88 Q 960,10 914,213" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+  <!-- NOC (aux, bottom-right) -->
+  <foreignObject x="838" y="346" width="138" height="54">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-node aux">
+      <span>NOC</span>
+    </div>
+  </foreignObject>
 
-  <!-- SI/PM ↔ TAC: bows lower-right -->
-  <path d="M 912,322 Q 1010,468 790,428" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
+  <!-- Hub label at ring center -->
+  <foreignObject x="450" y="196" width="220" height="52">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="eco-hub">
+      <span class="eco-hub-kicker">The</span>
+      <span class="eco-hub-word">Customer Journey</span>
+    </div>
+  </foreignObject>
 
-  <!-- TAC ↔ AM: bows lower-left (completing the circle) -->
-  <path d="M 617,418 Q 420,492 443,327" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
-
-  <!-- ── SATELLITES ── -->
-
-  <!-- Billing ↔ Accounting -->
-  <path d="M 788,98 Q 940,50 1092,78" fill="none" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
-
-  <!-- SI/PM ↔ Accounting -->
-  <line x1="1040" y1="245" x2="1092" y2="118" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
-
-  <!-- SI/PM ↔ NOC -->
-  <line x1="1040" y1="305" x2="1092" y2="388" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
-
-  <!-- TAC ↔ NOC -->
-  <line x1="790" y1="428" x2="1092" y2="428" stroke="#00a1e2" stroke-width="2.5" marker-start="url(#ahs)" marker-end="url(#ah)"/>
 </svg>"""
 
 HTML = f"""<!doctype html>
@@ -499,6 +524,84 @@ HTML = f"""<!doctype html>
   }}
 
   .rule-cyan {{ width: 96px; height: 4px; background: var(--secondary); margin-bottom: 32px; }}
+
+  /* Ecosystem diagram — node cards (used inside inline SVG foreignObject) */
+  .eco-node {{
+    box-sizing: border-box;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    text-align: center;
+    background: #ffffff;
+    border: 1.25px solid #1E6FE0;
+    border-radius: 12px;
+    color: #0E1B36;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    box-shadow: 0 4px 14px rgba(30,111,224,0.10), 0 1px 2px rgba(14,27,54,0.06);
+    position: relative;
+  }}
+  .eco-node.core::before {{
+    content: "";
+    position: absolute;
+    top: 8px; left: 10px;
+    width: 5px; height: 5px;
+    border-radius: 9999px;
+    background: #FF7A59;
+    box-shadow: 0 0 0 3px rgba(255,122,89,0.18);
+  }}
+  .eco-node.entry {{
+    background: #0E1B36;
+    color: #ffffff;
+    border-color: #0E1B36;
+    box-shadow: 0 8px 20px rgba(14,27,54,0.22), 0 1px 2px rgba(14,27,54,0.10);
+  }}
+  .eco-node.entry::before {{ display: none; }}
+  .eco-node.aux {{
+    background: #ffffff;
+    border-color: #6BA5FF;
+    color: #0E1B36;
+    box-shadow: 0 2px 8px rgba(30,111,224,0.06);
+  }}
+  .eco-entry-role {{
+    display: block;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 4px;
+  }}
+  .eco-hub {{
+    box-sizing: border-box;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }}
+  .eco-hub-kicker {{
+    display: block;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #1E6FE0;
+    margin-bottom: 6px;
+  }}
+  .eco-hub-word {{
+    display: block;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0E1B36;
+    white-space: nowrap;
+  }}
+  .ecosystem .eyebrow {{ color: #1E6FE0; }}
 </style>
 </head>
 <body>
@@ -606,11 +709,10 @@ HTML = f"""<!doctype html>
 
 <!-- ================= 06 CLIENT SERVICES ECOSYSTEM ================= -->
 <section data-label="06 Client Services Ecosystem" class="ecosystem">
-  {CORNER_LOGO}
   <div class="frame">
     <p class="eyebrow">Client Services Ecosystem &nbsp;&middot;&nbsp; Waytek inserted as a director</p>
     <h2 class="title">How the office connects.</h2>
-    <div style="margin-top:8px;flex:1;display:flex;align-items:center;">
+    <div style="margin-top:8px;flex:1;display:flex;align-items:center;justify-content:center;">
       {ECOSYSTEM_SVG}
     </div>
   </div>
