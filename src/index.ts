@@ -4,6 +4,7 @@ import staffingworldDeckHtml from '../prospect-staffingworld-deck.html';
 import monsterEnergyDeckHtml from '../prospect-monster-energy-deck.html';
 import localSmbDeckHtml from '../prospect-local-smb-deck.html';
 import centuryPharmaDeckHtml from '../prospect-century-pharma-deck.html';
+import stateGraphicsDeckHtml from '../prospect-state-graphics-deck.html';
 import q2HuddleDeckHtml from '../q2-huddle-2026-deck.html';
 
 const HTML_HEADERS = {
@@ -21,6 +22,7 @@ const routes: Record<string, string> = {
   '/monster-energy': monsterEnergyDeckHtml,
   '/local-smb': localSmbDeckHtml,
   '/century-pharma': centuryPharmaDeckHtml,
+  '/state-graphics': stateGraphicsDeckHtml,
   '/q2-huddle-2026': q2HuddleDeckHtml,
 };
 
