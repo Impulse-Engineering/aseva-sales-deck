@@ -8,6 +8,7 @@ import stateGraphicsDeckHtml from '../prospect-state-graphics-deck.html';
 import q2HuddleDeckHtml from '../q2-huddle-2026-deck.html';
 import networkDeckHtml from '../aseva-network-deck.html';
 import americanPackagingAiDeckHtml from '../prospect-americanpackaging-ai-deck.html';
+import aiWorkshopSimpleDeckHtml from '../prospect-ai-workshop-simple-deck.html';
 
 const HTML_HEADERS = {
   'Content-Type': 'text/html;charset=UTF-8',
@@ -28,6 +29,7 @@ const routes: Record<string, string> = {
   '/q2-huddle-2026': q2HuddleDeckHtml,
   '/network': networkDeckHtml,
   '/americanpackaging-ai': americanPackagingAiDeckHtml,
+  '/ai-workshop-simple': aiWorkshopSimpleDeckHtml,
 };
 
 export default {
