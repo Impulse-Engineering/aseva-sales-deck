@@ -10,6 +10,7 @@ import networkDeckHtml from '../aseva-network-deck.html';
 import americanPackagingAiDeckHtml from '../prospect-americanpackaging-ai-deck.html';
 import aiWorkshopSimpleDeckHtml from '../prospect-ai-workshop-simple-deck.html';
 import aiWorkshopV4DeckHtml from '../prospect-ai-workshop-v4-deck.html';
+import begaAiDemosDeckHtml from '../prospect-bega-ai-demos-deck.html';
 
 const HTML_HEADERS = {
   'Content-Type': 'text/html;charset=UTF-8',
@@ -32,6 +33,7 @@ const routes: Record<string, string> = {
   '/americanpackaging-ai': americanPackagingAiDeckHtml,
   '/ai-workshop-simple': aiWorkshopSimpleDeckHtml,
   '/ai-workshop-v4': aiWorkshopV4DeckHtml,
+  '/bega-ai-demos': begaAiDemosDeckHtml,
 };
 
 export default {
